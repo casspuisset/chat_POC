@@ -1,0 +1,27 @@
+# Frontend
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+
+## Running frontend
+
+To start a local session of this frontend, run:
+
+```bash
+ng serve
+```
+
+or
+
+```bash
+npm start
+```
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```

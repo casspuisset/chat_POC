@@ -1,0 +1,12 @@
+<div>
+  <div class="messages-list">
+    @for (message of messages(); track message) {
+      <b>{{ message.user }}:</b> {{ message.content }}
+    }
+  </div>
+  <div class="inputs">
+    <input [(ngModel)]="user" placeholder="Nom" />
+    <input [(ngModel)]="content" placeholder="Message" />
+    <button (click)="send()">Envoyer</button>
+  </div>
+</div>
