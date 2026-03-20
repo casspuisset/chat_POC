@@ -1,12 +1,37 @@
-<div>
-  <div class="messages-list">
-    @for (message of messages(); track message) {
-      <b>{{ message.user }}:</b> {{ message.content }}
-    }
-  </div>
-  <div class="inputs">
-    <input [(ngModel)]="user" placeholder="Nom" />
-    <input [(ngModel)]="content" placeholder="Message" />
-    <button (click)="send()">Envoyer</button>
-  </div>
-</div>
+@if (username()) {
+  <section class="chat">
+    <div class="messages-list">
+      @for (message of messages(); track message) {
+        <div class="message" [class.own]="message.user === username()">
+          <div class="message-bubble">
+            <span class="user">{{ message.user }}</span>
+            <span class="content">{{ message.content }}</span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="inputs">
+      <mat-form-field appearance="outline" class="input-field">
+        <input matInput [(ngModel)]="content" placeholder="Message..." />
+      </mat-form-field>
+
+      <button matFab color="primary" (click)="send()">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+  </section>
+} @else {
+  <section class="login">
+    <h2>Rentrez votre nom pour commencer la discussion</h2>
+
+    <div class="inputs">
+      <mat-form-field appearance="outline">
+        <mat-label>Votre nom</mat-label>
+        <input matInput [(ngModel)]="user" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="createUser()">Entrer</button>
+    </div>
+  </section>
+}
