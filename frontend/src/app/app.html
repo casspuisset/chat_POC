@@ -12,11 +12,8 @@
     </div>
 
     <div class="inputs">
-      <mat-form-field appearance="outline" class="input-field">
-        <input matInput [(ngModel)]="content" placeholder="Message..." />
-      </mat-form-field>
-
-      <button matFab color="primary" (click)="send()">
+      <input [(ngModel)]="content" placeholder="Message..." />
+      <button (click)="send()">
         <mat-icon>send</mat-icon>
       </button>
     </div>
@@ -26,12 +23,11 @@
     <h2>Rentrez votre nom pour commencer la discussion</h2>
 
     <div class="inputs">
-      <mat-form-field appearance="outline">
-        <mat-label>Votre nom</mat-label>
-        <input matInput [(ngModel)]="user" />
-      </mat-form-field>
+      <input [(ngModel)]="user" placeholder="Votre nom" />
 
-      <button mat-raised-button color="primary" (click)="createUser()">Entrer</button>
+      <button (click)="createUser()">
+        <mat-icon>send</mat-icon>
+      </button>
     </div>
   </section>
 }

@@ -14,3 +14,7 @@ npm start
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. You can send messages using inputs and clicking on the "send" button.
 You can use this interface on multiple browsers to simulate utilisation by multiple users.
+
+## Generating your databases
+
+You can find tables to implement on your databases on ./scripts to implement news features.
